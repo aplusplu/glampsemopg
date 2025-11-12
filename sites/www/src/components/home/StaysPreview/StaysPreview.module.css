@@ -1,0 +1,4 @@
+.grid { display: grid; gap: 14px; margin-top: 12px; }
+@media (min-width: 728px){ .grid{ grid-template-columns: repeat(3, 1fr); } }
+.header { display: grid; gap: 6px; margin-top: 18px; }
+.kicker{ color:#8C948D; font-weight:700; text-transform:uppercase; font-size:12px; }

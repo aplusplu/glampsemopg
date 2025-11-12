@@ -1,0 +1,66 @@
+:root{ --teal:#33626c; --sage:#ced3cd; --beige:#c5b496; --white:#fff; }
+
+.page{ padding-bottom: 0; }
+
+/* HERO */
+.hero{ position:relative; border-radius:28px; overflow:hidden; height:300px; margin:12px 0 18px; }
+.hero img{ width:100%; height:100%; object-fit:cover; display:block; }
+.overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(51,98,108,.22) 0%, rgba(51,98,108,.85) 85%); }
+.title{ position:absolute; left:22px; bottom:20px; margin:0; color:var(--white); font-weight:300; font-size:44px; letter-spacing:.3px; }
+
+/* INTRO */
+.intro{
+  background:var(--teal); color:#eaf0ee;
+  border-radius:22px; padding:16px; margin-bottom:10px; position:relative;
+}
+/* eliminăm “pastila gri” */
+.intro::after{ content:none; }
+.introText{ margin:0; line-height:1.55; }
+
+/* GRID & CARD */
+.grid{ margin-top:8px; }
+.card{ background:#fff; border-radius:22px; overflow:hidden; border:1px solid rgba(0,0,0,.05); display:flex; flex-direction:column; }
+
+/* toate imaginile egale */
+.cardImgWrap{
+  position:relative;
+  width:100%;
+  aspect-ratio: 4 / 3;       /* egalează toate imaginile */
+  overflow:hidden;
+  background:#eee;
+}
+.cardImgWrap img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;          /* umple fără deformare */
+}
+
+.pill{
+  position:absolute; left:12px; top:12px;
+  background:var(--beige); color:#fff;
+  border-radius:16px 16px 6px 16px; padding:8px 14px;
+  font-size:20px; letter-spacing:.2px;
+}
+.body{ padding:16px !important; display:grid; gap:8px; }
+.meta{ color:#1b1b1b; opacity:.75; }
+.price{ color:#1b1b1b; font-weight:700; }
+
+.btnGhost{
+  justify-self:start;
+  border:2px solid var(--teal) !important; color:var(--teal) !important;
+  border-radius:999px !important; padding:8px 16px !important; background:transparent !important;
+}
+.btnGhost:hover{ background:rgba(51,98,108,.06) !important; }
+
+.btnLink{
+  justify-self:start; padding:0 !important; min-width:unset !important;
+  color:#2a4f57 !important; text-transform:none !important; font-weight:600 !important;
+}
+.btnLink:hover{ text-decoration:underline; }
+
+@media (max-width: 599px){
+  .hero{ height:260px; }
+  .title{ font-size:38px; }
+  .cardImgWrap{ aspect-ratio: 4 / 3; }
+}

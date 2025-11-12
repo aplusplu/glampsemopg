@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&family=Nanum+Gothic:wght@400;700&display=swap');
+
+:root {
+  --teal:#33626C;
+  --sage:#CED3CD;
+  --beige:#C5B496;
+  --capsule:#829B97;
+  --ink:#2A4F57;
+  --white:#fff;
+  --bg:#E9ECE6;
+}
+
+/* ==== PAGE LAYOUT ==== */
+.page {
+  background: var(--bg);
+  padding: 8px 8px 28px;
+  font-family: "Nanum Gothic", Arial, sans-serif;
+  color: #1a1a1a;
+}
+
+/* ==== HERO ==== */
+.hero {
+  position: relative;
+  height: 600px;
+  border-radius: 22px;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, .10) 0%,
+    rgba(0, 0, 0, .28) 45%,
+    rgba(0, 0, 0, .44) 100%
+  );
+}
+
+/* ==== BRAND TEXT ==== */
+.brandText {
+  position: absolute;
+  top: 84px;
+  left: 20px;
+  color: var(--white);
+  line-height: 1;
+}
+.brandTop {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+.brandBottom {
+  font-family: "Zen Loop", cursive;
+  margin-top: -6px;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+/* ==== BOOK NU BUTTON ==== */
+.bookBtn {
+  position: absolute !important;
+  left: 16px;
+  bottom: 22px;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+  background: transparent !important;
+  border-radius: 20px !important;
+  padding: 10px 22px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.4px !important;
+  text-transform: none !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14);
+}
+
+/* ==== RESPONSIVE HERO/TITLE ==== */
+@media (max-width: 360px) {
+  .brandBottom { font-size: 54px; }
+}
+@media (min-width: 420px) {
+  .hero { height: 640px; }
+  .brandBottom { font-size: 64px; }
+}
+
+/* === CAPSULA TEAL === */
+.tealCapsule{
+  position: relative;
+  margin-top: 14px;
+  background: var(--teal);
+  color: #eaf0ee;
+  border-radius: 16px;
+  padding: 28px 28px 280px !important;  /* spațiu MARE pt avatar */
+  overflow: visible !important;
+}
+/* decupaj salvie sus-stânga */
+.tealCapsule::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:-38px;
+  width: 230px;
+  height: 92px;
+  background: var(--sage);
+  border-bottom-right-radius: 44px;
+}
+/* cerc discret decorativ jos-dreapta */
+.tealCapsule::after{
+  content:"";
+  position:absolute;
+  right:-54px;
+  bottom:-54px;
+  width: 160px;
+  height: 160px;
+  background: rgba(255,255,255,.04);
+  border-radius: 50%;
+}
+
+.introH{
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.14;
+  margin: 18px 0 10px;
+}
+.introP{
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 14.2px;
+  line-height: 1.64;
+  letter-spacing: .1px;
+  margin: 0;
+}
+
+/* ==== AVATAR uriaș + mai jos ==== */
+.tealCapsule .gitteAvatar{
+  position:absolute !important;
+  left:50% !important;
+  transform:translateX(-50%) !important;
+  bottom:30px !important;           /* îl coborâm sub capsulă */
+  width:180px !important;            /* 3–4x mai mare */
+  height:180px !important;
+  display:block !important;
+  object-fit:cover !important;
+  border:8px solid var(--sage) !important;
+  border-radius:50% !important;
+  box-shadow:0 16px 28px rgba(0,0,0,.30) !important;
+  z-index:5 !important;
+}
+
+/* ==== Buton bej ieșit din capsulă + plăcuță salvie ==== */
+.ctaBeige{
+  position: absolute !important;
+  left: 22px;
+  bottom: -26px;
+  background: var(--beige) !important;
+  color: #000 !important;
+  border-radius: 22px !important;
+  padding: 14px 22px !important;
+  font-weight: 800 !important;
+  letter-spacing: .2px !important;
+  text-transform: none !important;
+  z-index: 2;
+}
+.ctaPlate{
+  position: absolute;
+  left: 16px;
+  bottom: -12px;
+  width: 260px;
+  height: 72px;
+  background: #C9D2CB;
+  opacity: .96;
+  border-radius: 18px;
+  z-index: 1;
+}
+
+/* === PASTILA DE TITLU === */
+.sectionPill{
+  margin-top: 96px;
+  background: var(--beige);
+  width: 88%;
+  padding: 16px 18px;
+  border-radius: 20px;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,.04);
+}
+.sectionPillText{
+  font-family: "Nanum Gothic", sans-serif;
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* === REVIEW SECTION (titluri Zen Loop, body Nanum) === */
+.reviewsTitle{
+  font-family: "Zen Loop", cursive;
+  font-size: 48px;
+  line-height: .98;
+  letter-spacing: .2px;
+  color: var(--teal);
+  margin: 26px 0 12px;
+  text-align: left;
+}
+
+.reviewsGrid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  margin: 12px 8px 40px;
+}
+
+.reviewCard{
+  background: var(--capsule);
+  color: #eef3f1;
+  padding: 18px 18px 20px;
+  border-radius: 22px;
+  border-top-left-radius: 42px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+}
+
+.reviewCard.teal   { background: var(--teal); }
+.reviewCard.capsule{ background: var(--capsule); }
+.reviewCard.sage   { background: #9BB2AA; }
+
+.reviewMeta{
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .4px;
+  opacity: .9;
+  margin: 0 0 6px;
+  color: rgba(255,255,255,.96);
+}
+
+.reviewTitle{
+  font-family: "Zen Loop", cursive;
+  font-size: 34px;
+  line-height: 1.02;
+  letter-spacing: .2px;
+  margin: 0 0 10px;
+  color: var(--white);
+}
+
+.reviewBody{
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 14.2px;
+  line-height: 1.64;
+  letter-spacing: .1px;
+  margin: 0;
+  color: #f3f7f5;
+}
+
+/* Avatar opțional în capul cardului */
+.reviewHead{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.reviewAvatar{
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,.65);
+  box-shadow: 0 2px 8px rgba(0,0,0,.18);
+}
+
+/* === mici ajustări === */
+@media (max-width: 360px){
+  .tealCapsule{ padding-bottom: 220px !important; }
+  .tealCapsule .gitteAvatar{
+    width: 260px !important;
+    height: 260px !important;
+    bottom: -70px !important;
+    border-width: 6px !important;
+  }
+  .ctaPlate{ width: 220px; height: 64px; }
+}
+@media (min-width: 420px){
+  .tealCapsule{ padding-bottom: 280px !important; }
+  .ctaPlate{ width: 260px; height: 72px; }
+}
+@media (min-width: 728px){
+  .reviewsGrid{ grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+@media (min-width: 1024px){
+  .reviewsGrid{ grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
+}
+

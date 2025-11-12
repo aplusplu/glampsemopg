@@ -1,0 +1,56 @@
+:root{ --teal:#33626c; --sage:#ced3cd; --beige:#c5b496; --white:#fff; }
+
+.page{ padding-bottom: 32px; }
+
+/* HERO detaliu */
+.hero{ position:relative; border-radius:28px; overflow:hidden; height:320px; margin:12px 0 12px; }
+.hero img{ width:100%; height:100%; display:block; object-fit:cover; }
+.overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(51,98,108,.18) 0%, rgba(51,98,108,.85) 88%); }
+.title{ position:absolute; left:22px; bottom:20px; margin:0; color:var(--white); font-weight:700; font-size:40px; }
+
+/* META STRIP */
+.metaStrip{
+  background:var(--teal); color:#eaf0ee; border-radius:16px; padding:10px 14px; margin-bottom:14px;
+}
+.metaContent{ align-items:center; flex-wrap:wrap; }
+.metaItem{ opacity:.95; }
+.tags{ display:flex; align-items:center; }
+.cta{ background:var(--beige) !important; color:#1a1a1a !important; margin-left:auto; }
+
+/* CONTENT */
+.content{ margin-top:4px; }
+
+.section{
+  background:#fff; border:1px solid rgba(0,0,0,.05); border-radius:18px;
+  padding:16px; margin-bottom:12px;
+}
+.h5{ font-weight:800 !important; color:#2a4f57; margin-bottom:6px !important; }
+.text{ line-height:1.6; color:#1b1b1b; opacity:.95; }
+.list{ padding-left:18px; margin:0; }
+.list li{ margin:6px 0; }
+
+/* GALLERY */
+.gallery{ display:grid; grid-template-columns: repeat(2, 1fr); gap:8px; }
+.gallery img{ width:100%; height:180px; object-fit:cover; border-radius:12px; }
+
+/* SIDEBAR PREȚ / BOOK */
+.priceCard{
+  position:sticky; top:12px;
+  background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:18px; padding:16px;
+  display:grid; gap:10px;
+}
+.priceBig{ font-size:28px; font-weight:800; color:#1b1b1b; }
+.people{ color:#1b1b1b; opacity:.7; }
+.tagsStack{ flex-wrap:wrap; }
+
+/* Links & misc */
+.backLink{ color:#2a4f57 !important; text-transform:none !important; font-weight:600 !important; }
+.backLink:hover{ text-decoration:underline; }
+
+@media (max-width: 599px){
+  .hero{ height:260px; }
+  .title{ font-size:34px; }
+  .gallery img{ height:150px; }
+  .metaContent{ gap:8px; }
+  .cta{ margin-left:0; }
+}

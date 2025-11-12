@@ -1,0 +1,33 @@
+.item {
+  border-radius: 14px;
+  border: 1px solid #e6e7e4;
+  background: #fff;
+  overflow: hidden;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.heartBtn {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.heart {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+
+.heartEmpty { opacity: 0.45; }
+.heartFull { opacity: 1; }
+
+.desc {
+  color: #2f2f2f;
+  line-height: 1.55;
+}

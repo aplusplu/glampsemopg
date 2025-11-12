@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&family=Nanum+Gothic:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Suprascrie preflight-ul: folosește Nanum ca “sans” global */
+@layer base {
+  html { @apply font-sans; } /* ia definția din theme.extend.fontFamily.sans */
+  body { background: #CED3CD; }
+}

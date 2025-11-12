@@ -1,0 +1,8 @@
+/* Poppins 400/600/700 – ca în mockup-ul tău */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+html, body, #root {
+  height: 100%;
+}
+
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }

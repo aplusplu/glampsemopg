@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&family=Nanum+Gothic:wght@400;700&display=swap');
+
+:root{
+  --teal:#33626C;
+  --ink:#2A4F57;
+  --sage:#CED3CD;
+  --beige:#C5B496;
+  --bg:#E9ECE6;
+  --white:#fff;
+}
+
+/* ===== HERO ===== */
+.heroWrap{
+  position:relative;
+  height: 420px;
+  border-radius: 22px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.heroImg{
+  width:100%; height:100%; object-fit:cover; display:block;
+}
+.heroShade{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,.42) 70%);
+}
+
+/* ===== head sect + HEADLINES ===== */
+.tealBlock{
+  position: relative;
+  background: var(--teal);
+  color: rgba(255,255,255,.92);
+  border-bottom-left-radius: 120px;         /* ccurb down capsule */
+  padding: 48px 20px 24px;
+  margin-top: -26px;                        /* over hero */
+}
+
+/* headline big – Zen Loop */
+.h1{
+  font-family: "Zen Loop", cursive;
+  font-size: 72px;
+  line-height: .98;
+  letter-spacing: .2px;
+  margin: 0 0 10px;
+  color: #fff;
+  text-align: center;
+}
+/* sub-head Zen Loop 3row */
+.h2{
+  font-family: "Zen Loop", cursive;
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: .2px;
+  margin: 0 0 18px;
+  color: #eaf1ef;
+  text-align: center;
+}
+.lead{
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 14.8px;
+  line-height: 1.7;
+  letter-spacing: .1px;
+  text-align: center;
+  margin: 0 auto 26px;
+  max-width: 620px;
+  color: rgba(255,255,255,.86);
+}
+
+/* ===== FORM DARK – override MUI ===== */
+.formShell{
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px 32px;
+}
+
+/* on MUI thru :global – inputs & labels */
+.formDark :global(.MuiTextField-root){
+  margin-bottom: 14px;
+}
+.formDark :global(.MuiOutlinedInput-root){
+  background: transparent;
+  border-radius: 22px;
+}
+.formDark :global(.MuiOutlinedInput-notchedOutline){
+  border-color: rgba(255,255,255,.85);
+}
+.formDark :global(.MuiOutlinedInput-input){
+  color: #fff;
+  font-family: "Nanum Gothic", sans-serif;
+  padding: 12px 16px;
+}
+.formDark :global(.MuiInputLabel-root){
+  color: rgba(255,255,255,.85);
+  font-family: "Nanum Gothic", sans-serif;
+}
+.formDark :global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline){
+  border-color: #fff;
+}
+.formDark :global(.MuiInputLabel-root.Mui-focused){
+  color:#fff;
+}
+.formDark :global(textarea.MuiOutlinedInput-input){
+  line-height: 1.6;
+}
+
+/* ===== CTA – buton grey on plaque ===== */
+.ctaWrap{
+  position: relative;
+  margin-top: 10px;
+}
+.ctaPlate{
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 10px;
+  height: 64px;
+  background: #8EA7A3;     /* salvia */
+  opacity: .9;
+  border-radius: 22px;
+  z-index: 1;
+}
+.ctaBtn :global(.MuiButton-root){
+  position: relative;
+  z-index: 2;
+  background: var(--beige);
+  color: #203436;
+  border-radius: 22px;
+  padding: 12px 18px;
+  text-transform: none;
+  font-weight: 700;
+  font-family: "Nanum Gothic", sans-serif;
+  letter-spacing: .2px;
+  box-shadow: none;
+}
+.ctaBtn :global(.MuiButton-root:hover){
+  background: #b8a280;
+}
+
+/* ===== CARD „Kontakt Gitte” ===== */
+.contactCard{
+  max-width: 720px;
+  margin: 18px auto 36px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+.helper{
+  display:flex; align-items:center; gap:10px;
+  color:#6b7f7a; margin-bottom: 8px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.helperAvatar{
+  width:36px; height:36px; border-radius:50%;
+  background: var(--teal); color:#fff; display:grid; place-items:center;
+  font-weight:700;
+}
+
+/* ===== FOOTER brand sma ===== */
+.brandFoot{
+  text-align:center; color:#9fb2ae; margin-top: 10px;
+  font-family: "Zen Loop", cursive;
+  font-size: 22px;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 480px){
+  .h1{ font-size: 86px; }
+  .h2{ font-size: 56px; }
+}
+@media (min-width: 768px){
+  .heroWrap{ height: 480px; }
+  .tealBlock{ padding: 56px 28px 34px; border-bottom-left-radius: 160px; }
+  .h1{ font-size: 96px; }
+  .h2{ font-size: 64px; }
+}

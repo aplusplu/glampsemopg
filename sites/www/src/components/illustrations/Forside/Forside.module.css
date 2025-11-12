@@ -1,0 +1,7 @@
+.wrapper { position: relative; width: 100%; }
+.cta {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: clamp(16px, 6vw, 40px);
+}

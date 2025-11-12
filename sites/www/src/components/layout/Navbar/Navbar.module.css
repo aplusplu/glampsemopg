@@ -1,0 +1,112 @@
+:root {
+  --teal: #33626c;
+  --sage: #ced3cd;
+  --beige: #c5b496;
+  --white: #ffffff;
+}
+
+/* ========= NAVBAR WRAPPER ========= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--sage);
+  padding: 10px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ========= BRAND / LOGO ========= */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  height: 80px; /* 2x original (ex: era 40px) */
+  width: auto;
+}
+
+.brandName {
+  font-family: "Zen Loop", cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--teal);
+  letter-spacing: 0.5px;
+}
+
+/* ========= MENU / LINKS ========= */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navLinks a {
+  font-family: "Zen Loop", cursive;
+  font-size: 1.5rem;
+  color: var(--teal);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLinks a:hover {
+  color: var(--beige);
+}
+
+/* ========= BURGER BUTTON ========= */
+.burger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.burger img,
+.burger svg {
+  width: 64px; /* 2× original */
+  height: 64px;
+  transition: transform 0.2s ease;
+}
+
+.burger:hover img,
+.burger:hover svg {
+  transform: scale(1.08);
+}
+
+/* ========= DRAWER MENU ========= */
+.drawer {
+  background: var(--teal);
+  color: var(--white);
+  font-family: "Zen Loop", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  height: 100vh;
+  text-align: center;
+}
+
+.drawer a {
+  font-size: 2rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.drawer a:hover {
+  color: var(--beige);
+}
+
+/* ========= FOOTER (în drawer) ========= */
+.drawerFooter {
+  position: absolute;
+  bottom: 32px;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}

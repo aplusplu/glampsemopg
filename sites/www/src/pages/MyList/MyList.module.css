@@ -1,0 +1,26 @@
+/* HERO BAR */
+.hero::after{ content:none; }  /* <- scoate pastila gri */
+
+/* GRID + CARD: imagini egale */
+.imgWrap{
+  position:relative;
+  width:100%;
+  aspect-ratio: 4 / 3;   /* identic pentru toate imaginile */
+  overflow:hidden;
+  background:#eee;
+}
+.imgWrap img{
+  width:100%; height:100%; object-fit:cover; display:block;
+}
+
+/* Grid făr’ warnings MUI: doar CSS */
+.grid{
+  margin-top: 8px;
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap:12px;
+}
+.gridItem{ grid-column: span 12; }
+@media (min-width: 900px){
+  .gridItem{ grid-column: span 4; } /* 3 pe rând pe desktop */
+}

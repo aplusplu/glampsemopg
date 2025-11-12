@@ -1,0 +1,84 @@
+/* src/components/illustrations/Aktiviteter/Hero.module.css */
+
+/* HERO (CSS-only, no SVG) */
+.hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 390 / 694;
+  background: #F7F7F5; /* var(--bg) fallback */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Top gradient band */
+.heroTop {
+  position: absolute;
+  inset: 0 0 35% 0;
+  background: linear-gradient(180deg, #0E1A14 0%, #27453A 55%, #2B5140 100%);
+}
+.heroTop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(54, 54, 54, 0.70);
+}
+
+/* Small gradient square at top-left */
+.avatar {
+  position: absolute;
+  top: 26px;
+  left: 23px;
+  width: 52px;
+  height: 52px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #6FA08A 0%, #C6E2D2 100%);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08) inset;
+}
+
+/* Title placeholder */
+.title {
+  position: absolute;
+  left: 50%;
+  top: 18%;
+  transform: translateX(-50%);
+  width: 82%;
+  height: clamp(28px, 12vw, 60px);
+  background: linear-gradient(90deg, #ffffff 30%, rgba(255,255,255,0.55) 100%);
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.2));
+  border-radius: 4px;
+}
+
+/* Right badge with burger icon */
+.badge {
+  position: absolute;
+  top: 26px;
+  right: 21px;
+  height: 50px;
+  width: 100px;
+  background: #829B97;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+.burger { display: grid; gap: 6px; }
+.burger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Lower green panel */
+.greenPanel {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 46%;
+  background: #33626C;
+  border-top-left-radius: 24px;
+}
+
+@media (min-width: 728px) {
+  .hero { border-radius: 16px; }
+  .badge { border-radius: 14px; }
+}
